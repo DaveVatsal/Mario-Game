@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "orbitron",serif;
+}
+
+body,html {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    overflow: hidden;
+} 
+
+.game-container {
+    background-image: url(assets/bg.jpg);
+    background-size: 100vw 100vh;
+    width: 100%;
+    height:100%;
+}
+
+.welcome {
+   position: relative;
+   text-align: center;
+   top: 11%;
+   font-size: 40px;
+   color: #30362F;
+}
+
+.user {
+    background-image: url(assets/mario.png);
+    background-repeat: no-repeat;
+    width:267px;
+    height: 280px;
+    background-size: cover;
+    position: absolute;
+    margin: 0;
+    padding:0;
+    bottom: 20%;
+    left:-80px;
+}
+
+.game-over {
+    visibility: hidden;
+    position: relative;
+    color: #30362F;
+    top: 25%;
+    left: 39%;
+    font-size: 60px;
+}
+
+.score {
+    position: absolute;
+    right: 60px;
+    top: 10%;
+    font-size: 25px;
+    color: #42213D;
+    border: 1px solid black;
+    height: 40px;
+    width: 223px;
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.dragon {
+    background-image: url(assets/enemy.png);
+    background-size: cover;
+    height: 173px;
+    width: 165px;
+    background-position: center;
+    position: absolute;
+    left: 44vw;
+    bottom: 20%;
+}
+
+.animateUser {
+    animation: user 0.7s ; /* Animation duration is 1 second */
+}
+
+@keyframes user {
+    0% {
+        bottom: 20%;
+    }
+    50% {
+        bottom: 70%;
+    }
+    100% {
+        bottom: 20%; 
+    }
+}
+
+.enemy {
+    animation: enemy 5s linear infinite;
+}
+
+@keyframes enemy {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: -10vw;
+    }
+} 
+
+.lose {
+    animation: lose 4s linear;
+}
+
+@keyframes lose {
+    0%,25% {
+        bottom: 20%;
+    }
+    25%,
+    50% {
+        bottom: 0%;
+    }
+    50%,75% {
+        bottom: -20%;
+    }
+    75%,
+    100%{
+        bottom: -34%;
+    }
+}
